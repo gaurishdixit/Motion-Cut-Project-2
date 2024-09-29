@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+          }
+          .container{
+            height: 450px;
+            width: 100%;
+            background-image: url(one.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            animation-name: myani;
+            animation-duration: 12s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+          }
+          @keyframes myani{
+            0%{background-image: url(one.jpg);}
+            30%{background-image: url(two.jpeg);}
+            75%{background-image: url(three.jpg);}
+
+          }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f3f3f3;
+}
+
+.slider {
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.wrapper {
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+
+.wrapper input {
+    display: -ms-flexbox;
+}
+
+.slide {
+    width: 200%;
+    transition: 0.6s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.navigation-manual {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 20px;
+}
+
+.manual-btn:hover {
+    background: #ffffff;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -100%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -200%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -300%;
+}
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 370px;
+}
+
+.navigation-auto div {
+    border: 2px solid #ffffff;
+    padding: 5px;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.auto-btn1 {
+    animation: slider 16s infinite;
+}
+
+.auto-btn2 {
+    animation: slider 16s infinite;
+    animation-delay: 4s;
+}
+
+.auto-btn3 {
+    animation: slider 16s infinite;
+    animation-delay: 8s;
+}
+
+.auto-btn4 {
+    animation: slider 16s infinite;
+    animation-delay: 12s;
+}
+
+@keyframes slider {
+    0%, 20% {
+        background: #ffffff;
+    }
+    25%, 45% {
+        background: transparent;
+    }
+}
